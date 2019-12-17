@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>没有网络</title>
+    <style type="text/css">
+        *{margin:0;padding:0;}
+        body {
+            font-family: "Helvetica Neue",Helvetica, Arial,"PingFang SC","Hiragino Sans GB","Heiti SC","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+            font-size: 14px;
+            color: #000;
+        }
+        .fl{float:left;}
+        .fr{float:right;}
+        .clearfix:after {content: "";display: block;height: 0;line-height:0;clear: both;visibility: hidden;}
+        .clearfix {zoom: 1; /*兼容ie6*/}
+        /*.wrap{width:300px;margin:10% auto 0;}*/
+        .wrap{position:fixed;top:50%;left:50%;width:300px;margin:-115px 0 0 -150px;}
+        .pic{display:block;width:100px;height:151px;margin:0 auto;}
+        .cue{margin-bottom:17px;font-size:14px;color:#333;line-height:26px;text-align:center;}
+        .icon{display:block;width:100px;height:36px;font-size:16px;color:#fff;line-height:36px;text-align:center;border-radius:4px;}
+        .close{background-color:#f30;}
+        .set{background-color:#009688;}
+    </style>
+</head>
+<body>
+<div class="wrap">
+    <img class="pic" src="net_work.png" alt="" />
+    <p class="cue">很抱歉，当前没有网络，请您检查您的网络配置</p>
+    <div class="clearfix">
+        <span id ="close" class="icon fl close" onclick="setup('close')">关闭</span>
+        <span id="setup"  class="icon fr set" onclick="setup('setup')">网络设置</span>
+    </div>
+</div>
+</body>
+
+<script>
+
+    function setup(data){
+        isNetWork.netWork(data)
+    }
+
+</script>
+
+
+</html>
